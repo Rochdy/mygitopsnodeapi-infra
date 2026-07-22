@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: myapp
+          image: rochdy/myk8sgitopsapp:v0.0.1
+          env:
+          - name: ENV_NAME
+            value: "production"
